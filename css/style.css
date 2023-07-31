@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+:root {
+    /* Primary */
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    /* Neutral */
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+    --white: hsl(0, 0%, 100%);
+    /* footer */
+    --clr-footer: hsla(202, 22%, 90%, 0.4);
+    /* Typography */
+    --font-bai-jamjuree: 'Bai Jamjuree', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--font-bai-jamjuree);
+    font-size: 18px;
+}
+
+.wrapper {
+    width: 100%;
+    background-image: url(../images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 0 4rem 0;
+}
+
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/************** HEADER **************/
+.title {
+    color: var(--dark-grayish-blue);
+    font-size: 2rem;
+}
+
+.paragraph {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+}
+
+.header {
+    padding-top: 8rem;
+    max-width: 600px;
+}
+
+.header__texts {
+    padding: 3rem 0;
+}
+
+.header__btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.header__btn {
+    color: var(--white);
+    background-color: antiquewhite;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+}
+
+.header__btn--ios {
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 0 -3px 0px hsl(171, 63%, 36%) inset, 0 10px 15px hsla(171, 63%, 36%, 0.2);
+}
+
+.header__btn--mac {
+    background-color: hsl(233, 100%, 69%);
+    box-shadow: 0 -3px 0px hsl(233, 50%, 53%) inset, 0 10px 15px hsla(233, 50%, 53%, 0.2);
+}
+
+.header__btn--ios:hover {
+    background-color: hsla(171, 66%, 44%, 0.7);
+}
+
+.header__btn--mac:hover {
+    background-color: hsla(233, 100%, 69%, 0.7);
+}
+
+/************** SNIPPETS SECTION **************/
+.snippets__grid {
+    display: grid;
+    gap: 4rem;
+    padding-top: 4rem;
+}
+
+.snippets__items {
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+}
+
+.snippets__texts {
+    margin: 0 auto;
+}
+
+.snippets__title {
+    font-size: 24px;
+}
+
+/************** ACCESS SECTION **************/
+.access__img {
+    padding-top: 4rem;
+}
+
+/************** SUPERCHARGE SECTION **************/
+.supercharge__grid {
+    padding-top: 5rem;
+    display: grid;
+    gap: 4rem;
+}
+
+.supercharge__title {
+    font-size: 24px;
+    padding-top: 2rem;
+}
+
+/************** COMPANIES SECTION **************/
+.companies {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+}
+
+/************** CLIPBOARD SECTION **************/
+.clipboard__texts {
+    padding-bottom: 3rem;
+}
+
+/************** FOOTER **************/
+.footer__container {
+    background-color: var(--clr-footer);
+    margin-top: 4rem;
+}
+
+.footer__img {
+    width: 60px;
+    height: 60px;
+}
+
+.footer {
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+}
+
+.footer__contact {
+    display: grid;
+    gap: 2rem;
+}
+
+.footer__contact a {
+    color: var(--dark-grayish-blue);
+    font-weight: 600;
+}
+
+.footer__contact a:hover {
+    color: var(--strong-cyan);
+}
+
+.footer__social {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer__social a img:hover {
+    filter: invert(60%) sepia(61%) saturate(474%) hue-rotate(122deg) brightness(90%) contrast(94%);
+}
+
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+
+
+/* MEDIA QUERIES */
+@media (min-width:376px) {
+    .wrapper {
+        background-image: url(../images/bg-header-desktop.png);
+    }
+}
+
+@media (min-width: 768px) {
+    .header__btns {
+        flex-direction: row;
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    /************** SNIPPETS SECTION **************/
+    .snippets__grid {
+        grid-template-columns: repeat(2, 60% 40%);
+        gap: 0;
+    }
+
+    .snippets__img {
+        margin-left: -15%;
+    }
+
+    .snippets__items {
+        height: 80%;
+        max-width: 370px;
+        display: grid;
+        place-items: end;
+        text-align: start;
+        gap: 0;
+    }
+
+    /************** SUPERCHARGE SECTION **************/
+    .supercharge__grid {
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+
+    .supercharge__title {
+        font-size: 24px;
+        padding-top: 2rem;
+    }
+
+    /************** COMPANIES SECTION **************/
+    .companies {
+        flex-direction: row;
+    }
+
+    /************** FOOTER **************/
+    .footer {
+        place-content: center;
+        grid-template-columns: 10% 60% 20%;
+    }
+
+    .footer__contact {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        text-align: start;
+        column-gap: 4rem;
+    }
+
+    .footer__social {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+@media (min-width:1441px) {
+    .wrapper {
+        background-image: url(../images/bg-header-desktop.png);
+        background-size: contain;
+    }
+}
